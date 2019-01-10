@@ -20,7 +20,7 @@ spec:
   - name: secure
     protocol: TCP
     port: 443
-    targetPort: 8443
+    targetPort: {{ .Values.apiserver.service.targetPort }}
     {{- if eq .Values.apiserver.service.type "NodePort" }}
     nodePort: {{ .Values.apiserver.service.nodePort.securePort }}
     {{- end }}

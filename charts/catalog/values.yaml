@@ -56,6 +56,8 @@ apiserver:
       # Available port in allowable range (e.g. 30000 - 32767 on minikube)
       # The TLS-enabled endpoint will be exposed here
       securePort: 30443
+    # Override the service targetPort
+    targetPort: 8443
   storage:
     # The storage backend to use; the only valid value is "etcd"
     # (left for "crd" support in future)
